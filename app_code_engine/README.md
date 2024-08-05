@@ -1,7 +1,5 @@
 # Deploy your app with Code Engine
 
-![cognitiveclass.ai logo](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-WD0231EN-SkillsNetwork/IDSN-logo.png)
-
 ## Introduction
 
 Now that you have Gradio to help you generate a user interface for an application, let's see how you can run applications on IBM Cloud and access it with a public URL using IBM Code Engine.
@@ -49,8 +47,6 @@ If you open the file explorer, you will see the files you created.
 
 Next, let's take a closer look at what should be included in each of the three files.
 
-
-
 # Step 1: Creating requirements.txt
 
 If you are a Data Scientist, you may be familiar with the `pip3 install <library-name>` command for installing libraries. By using a `requirements.txt` file that consists of all libraries you need, you can install all of them into your environment at once with the command `pip3 install -r requirements.txt`.
@@ -78,8 +74,6 @@ pip3 install -r requirements.txt
 *Note: Make sure you are in the `app_code_engine` directory and your virtual environment `my_env` created previously is activated. This allows the libraries to be installed into your virtual environment only.*
 
 Now that you have the libraries you need, let's write the Python code for the text-generation model demo.
-
-
 
 # Step 2: Creating demo.py
 
@@ -130,7 +124,6 @@ You can execute `ctrl+c` to shut down the application.
 
 Now let's create the `Dockerfile` which shows the container runtime what to do with your files for constructing the container image.
 
-
 # Step 3: Creating Dockerfile
 
 The `Dockerfile` is the blueprint for assembling a container image.
@@ -177,8 +170,6 @@ Now, you have to indicate to the Docker what command you want to run when your i
 
 Now that all three files have been created, let's bring in the Code Engine for building the container image.
 
-
-
 # IBM Code Engine project
 
 IBM Code Engine is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs. Code Engine even builds container images for you from your source code. All these workloads can seamlessly work together because they are all hosted within the same Kubernetes infrastructure. The Code Engine experience is designed so that you can focus on writing code and not on the infrastructure that is needed to host it.
@@ -217,7 +208,6 @@ ibmcloud ce project get --name PROJECT_NAME
 ```
 
 Next, you are going to use these resources to deploy your app.
-
 
 # Building a Container image with Code Engine
 
@@ -321,7 +311,6 @@ Once you see the status showing `Succeeded` (same as the following screenshot), 
 Buildrun Succeeded
 
 Now that the container image is ready, you need to pull the image from the Container Registry and deploy a containerized application using the image!
-
 
 # Deploying a Containerized app using Code Engine
 
